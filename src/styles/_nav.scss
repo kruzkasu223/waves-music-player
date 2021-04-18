@@ -1,0 +1,106 @@
+nav {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    button {
+        background: transparent;
+        cursor: pointer;
+        border: 2px solid var(--nav_btn_border_color);
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        color: var(--nav_btn_text_color);
+        font-weight: bold;
+        z-index: 10;
+        transform: translateY(0);
+        transition: transform 0.5s ease, background-color 0.2s ease,
+            color 0.2s ease;
+
+        &:hover {
+            background-color: var(--nav_btn_back_color_hover);
+            color: var(--nav_btn_text_color_hover);
+        }
+    }
+}
+
+.active_library_btn {
+    background-color: var(--nav_btn_back_color_hover);
+    color: var(--nav_btn_text_color_hover);
+    transform: translateY(7px);
+}
+
+//Toggle Switch
+
+.switch {
+    position: relative;
+    width: 3rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.switch-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.switch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid var(--heading_font_color);
+    border-radius: 0.25rem;
+}
+
+.switch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.switch-inner:before,
+.switch-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 1.5rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+    padding: 1px;
+    background-color: var(--primary_background_color);
+}
+
+.switch-inner:before {
+    content: "🌝";
+    color: #ffffff;
+}
+
+.switch-inner:after {
+    content: "🌞";
+    color: #2c2c2c;
+    text-align: right;
+}
+
+.switch-switch {
+    display: block;
+    width: 1rem;
+    margin: 0.25rem;
+    background: var(--heading_font_color);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 1.5rem;
+    border-radius: 0.125rem;
+    transition: all 0.3s ease-in 0s;
+}
+
+.switch-checkbox:checked + .switch-label .switch-inner {
+    margin-left: 0;
+}
+
+.switch-checkbox:checked + .switch-label .switch-switch {
+    right: 0px;
+}

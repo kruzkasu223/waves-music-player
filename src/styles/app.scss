@@ -1,0 +1,73 @@
+:root {
+    --primary_background_color: #ffffff;
+    --heading_font_color: #2c2c2c;
+    --nav_btn_border_color: #2c2c2c;
+    --nav_btn_text_color: #2c2c2c;
+    --nav_btn_text_color_hover: #ffffff;
+    --nav_btn_back_color_hover: #2c2c2c;
+    --song_container_h3_color: #575757;
+    --player_text_color: #000000;
+    --animate_track_back_color: #e0e0e0;
+    --library_box_shadow_color: #bbbbbb;
+    --library_back_color_hover: #dfe3ff;
+    --song_description_h4_color: #494949;
+    --selected_song_back_color: #c2cbff;
+    --scrollbar_color: #afafaf;
+}
+
+.dark {
+    --primary_background_color: #111111;
+    --heading_font_color: #d8d8d8;
+    --nav_btn_border_color: #d8d8d8;
+    --nav_btn_text_color: #d8d8d8;
+    --nav_btn_text_color_hover: #111111;
+    --nav_btn_back_color_hover: #d8d8d8;
+    --song_container_h3_color: #9b9b9b;
+    --player_text_color: #ffffff;
+    --animate_track_back_color: #4b4b4b;
+    --library_box_shadow_color: #464646;
+    --library_back_color_hover: #34353f;
+    --song_description_h4_color: #a1a1a1;
+    --selected_song_back_color: #3d4053;
+    --scrollbar_color: #525252;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--heading_font_color);
+}
+
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+.App {
+    transition: all 0.5s ease;
+    min-height: 100vh;
+    background-color: var(--primary_background_color);
+}
+
+.library_active {
+    margin-left: 20%;
+}
+
+@import "./player";
+@import "./song";
+@import "./library";
+@import "./nav";
